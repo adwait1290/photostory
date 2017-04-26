@@ -1,0 +1,37 @@
+
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<h1 class="main-title">Photos <span class="thin">And a Story</span></h1>
+				</div>
+
+			</div>
+						<section class="main">
+   				<div class="alert alert-danger" style="background-color:white;position:relative;top:30px;"> <%= flash[:login_error] %> </div>
+
+				<form action="/session" class="form-3" method='post'>
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    				<input type="hidden" name="_method" value="create">
+				    <p class="clearfix">
+				        <label for="login">Email</label>
+				        <input class="form-control" type="text" name="session[email]" id="login" placeholder="Username">
+				    </p>
+				    <p class="clearfix">
+				        <label for="password">Password</label>
+				        <input type="password" name="session[password]" id="password" placeholder="Password"> 
+				    </p>
+				    <p class="clearfix">
+				        <input type="checkbox" name="remember" id="remember">
+				        <label for="remember">Remember me</label>
+				    </p>
+				    <p class="clearfix">
+				        <input class="lotstext" type="submit" name="submit" value="Sign in">
+				    </p>
+				    </form>​
+				    <form class="form-4" action="users/register" style="position:relative; bottom:100px">
+				    <p class="clearfix">
+				    	<input type="submit" name="register" value="Not a Member? Join Now!">
+				    </p>
+				
+			</section>

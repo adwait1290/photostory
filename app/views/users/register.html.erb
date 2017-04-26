@@ -1,0 +1,61 @@
+			<div class="container demo-2">
+			<div class="content">
+			  <div class="alert alert-danger" role="alert" style="z-index:1;text-align:center">
+  <%= flash[:user_errors] unless flash[:user_errors].blank? %>
+			</div>
+                <div id="large-header2" class="large-header2">
+                    <canvas id="demo-canvas2"></canvas>
+                    <h1 class="main-title">Share <span class="thin">your Story!</span></h1>
+
+                </div>
+
+               		<section class="main">
+     <style>
+html {
+	height:900px;
+	overflow-y:hidden;
+}
+     </style>
+               		
+
+
+				<form class="form-2" action="/users/new" method="post" style="position:relative; bottom:400px;z-index=1">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="hidden" name="_method" value="create_user">
+				    <h1>Register</h1>
+				    <br>
+				    <p>
+				        <label for="login">First Name</label>
+				        <input type="text" name="user[first_name]" placeholder="First Name" required>
+				    </p>
+				     <p>
+				        <label for="login">Last Name</label>
+				        <input type="text" name="user[last_name]" placeholder="Last Name" required>
+				    </p>
+				     <p>
+				        <label for="login">Email</label>
+				        <input type="text" name="user[email]" placeholder="Email" required>
+				    </p>
+				     <p>
+				        <label for="login">Password</label>
+				        <input type="password" name="user[password]" placeholder="Password" required>
+				    </p>
+				     <p>
+				        <label for="login">Age</label>
+				        <input type="text" name="user[age]" placeholder="Age" required>
+				    </p>
+				     <p>
+				        <label for="login">City</label>
+				        <input type="text" name="user[city]" placeholder="City" required>
+				    </p>
+				    <p>
+				        <label for="password">State</label>
+				        <input type="text" name='user[state]' placeholder="State" required> 
+				    </p>
+				    <br>
+				    <p>
+				        <input class="register" type="submit" name="submit" value="Register">
+				    </p>       
+				</form>​
+			</section>
+			</div>

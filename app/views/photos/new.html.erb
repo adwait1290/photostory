@@ -1,0 +1,19 @@
+<div class="alert alert-danger" style="background-color:white;position:relative;top:30px;"> <%= flash[:photo_errors] %> </div>
+
+<div class="container newphoto">
+ <%= link_to 'Logout', sessions_destroy_path %>
+<div id="large-header" class="large-header">
+<h1 class="main-title">Add <span class="thin">A Photo</span></h1>
+<form class="form-1" action="/photos" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="create">
+    <input type="text" name="photo[title]" value="title">
+    <input type="text" name="photo[city]" value="city">
+    <input type="text" name="photo[state]" value="state">
+    <input type="text" name="photo[description]" value="description">
+    <textarea type="text" name="photo[story]" placeholder="Write your story here!" id="textboxid"></textarea>
+    <input type="file" name="photo[image]">
+    <input type="submit" class="btn btn-primary" value="Add Photo">
+   </form>
+ </div>
+ </div>
